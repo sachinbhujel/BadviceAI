@@ -3,7 +3,7 @@ import React from "react";
 function Navbar() {
   return (
     <div className="w-full flex justify-end">
-      <div className="p-2 rounded-full" style={{ backgroundColor: " #262626" }}>
+      <div className="p-1 rounded-full border-text border-[1.5px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"

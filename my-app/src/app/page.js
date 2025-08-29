@@ -8,8 +8,8 @@ export default function Home() {
     <div className="sm:w-[640px] w-full m-auto p-4">
       <div className="flex flex-col gap-5">
         <Navbar />
-        <h1 className="text-center text-5xl font-mono">Badvice</h1>
-        <p className="text-center" style={{ color: "#b3b3b3" }}>
+        <h1 className="text-center text-primary text-7xl font-semibold">Badvice</h1>
+        <p className="text-center text-text text-lg">
           Because sometimes you need advice that's brutally honest
         </p>
         <Input />

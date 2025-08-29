@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 function Input() {
   const [prompt, setPrompt] = useState("");
+  const [loading, setLoading] = useState(false);
   const [completion, setCompletion] = useState("");
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    inputRef.current.focus();
+  };
 
   const complete = async (e) => {
+    setLoading(true);
     e.preventDefault();
     setPrompt("");
     try {
@@ -16,9 +23,11 @@ function Input() {
         headers: { "Content-type": "application/json" },
       });
 
-      const data = await res.json();
-      console.log(data.result);
-      setCompletion(data.result);
+      if (res.ok) {
+        setLoading(false);
+        const data = await res.json();
+        setCompletion(data.result);
+      }
     } finally {
       console.log("HI");
     }
@@ -26,28 +35,33 @@ function Input() {
   return (
     <div className="flex flex-col gap-10">
       <form onSubmit={complete}>
-        <div className="border-2 p-2 flex flex-col gap-2 rounded-md">
+        <div
+          className="border-2 border-primary p-2 flex flex-col gap-4 rounded-md cursor-text"
+          onClick={handleFocus}
+        >
           <input
+            ref={inputRef}
             placeholder="Tell me about your problem..."
-            className="outline-none px-1 w-full placeholder-gray-200 rounded-md text-lg"
+            className="outline-none px-1 w-full placeholder-text text-text rounded-md text-lg"
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
+            required
           />
           <div className="flex justify-end">
             <button
-              className="bg-white rounded-sm text-black py-1.5 px-4 w-max"
+              className="bg-primary rounded-sm text-background py-1.5 px-4 w-max curosr-pointer"
               type="submit"
             >
-              Generate
+              {loading ? "Generating..." : "Generate"}
             </button>
           </div>
         </div>
       </form>
-      <div className="border-2 p-3 w-full h-40 rounded-md">
+      <div className="border-2 p-3 w-full h-40 border-secondary rounded-md">
         {completion ? (
-          <p>{completion}</p>
+          <p className="text-text text-lg">{completion}</p>
         ) : (
-          <p className="flex items-center justify-center h-33 text-center text-gray-200">
+          <p className="flex items-center justify-center min-h-33 text-center text-text text-lg">
             Your brutally honest advice will appear here...
           </p>
         )}
