@@ -17,7 +17,7 @@ function Input() {
     e.preventDefault();
     setPrompt("");
     try {
-      const res = await fetch("https://jrgm4n-3000.csb.app/api/badvice", {
+      const res = await fetch("/api/badvice", {
         method: "POST",
         body: JSON.stringify({ prompt }),
         headers: { "Content-type": "application/json" },

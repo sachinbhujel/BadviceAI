@@ -8,8 +8,10 @@ export default function Home() {
     <div className="sm:w-[640px] w-full m-auto p-4">
       <div className="flex flex-col gap-5">
         <Navbar />
-        <h1 className="text-center text-primary text-7xl font-semibold">Badvice</h1>
-        <p className="text-center text-text text-lg">
+        <h1 className="text-center text-primary sm:text-7xl text-5xl font-semibold">
+          BadviceAI
+        </h1>
+        <p className="text-center text-text sm:text-lg text-lg">
           Because sometimes you need advice that's brutally honest
         </p>
         <Input />
