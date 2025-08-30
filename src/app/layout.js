@@ -24,6 +24,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <head>
+        <meta property="og:title" content="BadviceAI" />
+        <meta property="og:description" content="Badvice AI is a fun, humorous AI that gives bad advice for any problem you throw at it." />
+        <meta property="og:image" content="/badvice-ai-og.png" />
         <script
           defer
           src="https://cloud.umami.is/script.js"
