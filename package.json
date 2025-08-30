@@ -11,6 +11,7 @@
   "dependencies": {
     "@ai-sdk/groq": "^2.0.16",
     "ai": "^5.0.27",
+    "html-to-image": "^1.11.13",
     "next": "15.5.2",
     "rate-limiter-flexible": "^7.2.0",
     "react": "19.1.0",
