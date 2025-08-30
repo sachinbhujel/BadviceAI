@@ -16,11 +16,6 @@ export async function POST(request) {
       "127.0.0.1";
     console.log(ip);
 
-    const ip2 = request.headers.get("x-forwarded-for");
-    const ip3 = request.headers.get("cf-connecting-ip");
-    const ip4 = request.headers.get("x-real-ip");
-
-
     try {
       await rateLimiter.consume(ip, 1);
     } catch (error) {
@@ -42,8 +37,7 @@ export async function POST(request) {
     const cleanText = result.text.startsWith('"')
       ? JSON.parse(result.text)
       : result.text;
-    return Response.json({ result: cleanText, ipTest: [ip2, ip3, ip4] });
-
+    return Response.json({ result: cleanText });
   } catch (error) {
     console.log("Error generating text!", error);
     return Response.json({ error: "Failed to generate text" }, { status: 500 });
