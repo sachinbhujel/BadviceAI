@@ -20,6 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="096256ca-810e-4c92-8142-f2d16ce8de7d"
+        ></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
