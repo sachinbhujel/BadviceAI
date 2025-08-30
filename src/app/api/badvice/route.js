@@ -5,8 +5,10 @@ export async function POST(request) {
   try {
     const { prompt } = await request.json();
     const result = await generateText({
-      model: groq("llama-3.3-70b-versatile"),
-      system: `You always give the worst advice in a funny roasting way. And keep it short and simple like a human person said. Also make it in 40 words.`,
+      model: groq("llama-3.1-8b-instant"),
+      system: `You always give the worst advice possible, in a funny,
+       roasting, human-like tone. Keep it short, simple, and under 60 words. Make the advice sound
+        realistic enough to be believable, but still terrible.`,
       prompt,
     });
 

@@ -5,7 +5,7 @@ function Footer() {
     <div className="mt-4">
       <p className="text-sm text-center text-text">
         Made with ❤️ by{" "}
-        <a href="#" className="font-semibold underline">
+        <a href="https://github.com/sachinbhujel" target="_blank" className="font-semibold underline">
           Sachin Bhujel
         </a>
       </p>

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={`h-screen antialiased`}>{children}</body>
+      <body className={`min-h-screen antialiased`}>{children}</body>
     </html>
   );
 }

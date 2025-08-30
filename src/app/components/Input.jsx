@@ -57,7 +57,7 @@ function Input() {
           </div>
         </div>
       </form>
-      <div className="border-2 p-3 w-full h-40 border-secondary rounded-md">
+      <div className="border-2 p-3 w-full min-h-40 border-secondary rounded-md">
         {completion ? (
           <p className="text-text text-lg">{completion}</p>
         ) : (
