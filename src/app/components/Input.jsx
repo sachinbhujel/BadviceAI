@@ -86,13 +86,13 @@ function Input() {
             className="cursor-pointer sm:w-[50%] w-[100%] border-secondary border-2 text-center p-1 text-sm text-text hover:scale-102 transition-transform duration-200"
             onClick={() => setPrompt("How to swim in the waterpark")}
           >
-            How to swim in the waterpark
+           What is 2+2?
           </p>
           <p
             className="cursor-pointer sm:w-[50%] w-[100%] border-secondary border-2 text-center p-1 text-sm text-text hover:scale-102 transition-transform duration-200"
             onClick={() => setPrompt("How to solve every math question")}
           >
-            How to solve every math question
+            How to speak with confidence? 
           </p>
         </div>
       </form>
