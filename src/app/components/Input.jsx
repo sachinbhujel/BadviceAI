@@ -46,6 +46,7 @@ function Input() {
   const handleView = () => {
     setShowContent(true);
   };
+
   const handleDownload = () => {
     console.log("img done");
     const node = document.getElementById("my-node");
@@ -76,6 +77,7 @@ function Input() {
             <button
               className="bg-primary hover:bg-accent hover:text-background rounded-sm text-background py-1.5 px-4 w-max cursor-pointer"
               type="submit"
+              onClick={(e) => e.stopPropagation()}
             >
               {loading ? "Generating..." : "Generate"}
             </button>
@@ -84,15 +86,15 @@ function Input() {
         <div className="sm:flex flex sm:flex-row flex-col gap-3">
           <p
             className="cursor-pointer sm:w-[50%] w-[100%] border-secondary border-2 text-center p-1 text-sm text-text hover:scale-102 transition-transform duration-200"
-            onClick={() => setPrompt("How to swim in the waterpark")}
+            onClick={() => setPrompt("What is 2+2?")}
           >
-           What is 2+2?
+            What is 2+2?
           </p>
           <p
             className="cursor-pointer sm:w-[50%] w-[100%] border-secondary border-2 text-center p-1 text-sm text-text hover:scale-102 transition-transform duration-200"
-            onClick={() => setPrompt("How to solve every math question")}
+            onClick={() => setPrompt("How to speak with confidence?")}
           >
-            How to speak with confidence? 
+            How to speak with confidence?
           </p>
         </div>
       </form>
