@@ -10,7 +10,7 @@ Badvice AI is a fun, humorous AI that gives *bad advice* for any problem you thr
 
 ## Demo
 
-You can try it live [here](#)
+You can try it live [here](https://badvice.vercel.app)
 
 ## How it Works
 
