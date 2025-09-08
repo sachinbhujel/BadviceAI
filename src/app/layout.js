@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BadviceAI",
+  title: "BadviceAI | Funny AI That Gives Bad Advice",
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <head>
-        <meta property="og:title" content="BadviceAI" />
+        <meta property="og:title" content="BadviceAI | Funny AI That Gives Bad Advice" />
         <meta property="og:description" content="Badvice AI is a fun, humorous AI that gives bad advice for any problem you throw at it." />
         <meta property="og:image" content="/badvice-ai-og.png" />
         <script
